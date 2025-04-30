@@ -1,0 +1,11 @@
+services:
+    langgraph:
+      build: .
+      ports:
+        - 8888:8888
+      volumes:
+        - ./:/home/jupyter/work
+      environment:
+          - PYTHONUNBUFFERED=1
+          - OPENAI_API_KEY=${OPENAI_API_KEY}
+      restart: unless-stopped
