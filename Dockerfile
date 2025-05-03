@@ -35,5 +35,8 @@ USER jupyter
 # Expose JupyterLab port
 EXPOSE 8888
 
+# Expose LangGraph Studio port
+EXPOSE 2024
+
 # Command to run JupyterLab
 CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--NotebookApp.token=''", "--NotebookApp.password=''"]

@@ -1,3 +1,5 @@
+*/studio/.langgraph_api/*
+*/studio/.env*
 ..env*
 ..gitignore.un~
 .gitignore~
