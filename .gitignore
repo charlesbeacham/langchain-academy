@@ -1,3 +1,6 @@
+..env*
+..gitignore.un~
+.gitignore~
 .ipynb_checkpoints/
 
 .idea/
