@@ -20,6 +20,9 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install --no-cache-dir jupyterlab
 
+# set up Jupyter settings
+COPY --chown=jupyter:jupyter ./overrides.json /usr/local/share/jupyter/lab/settings/overrides.json
+
 # Create and set permissions on work directory
 RUN mkdir -p /home/jupyter/work && chown -R jupyter:jupyter /home/jupyter
 
