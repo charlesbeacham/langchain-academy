@@ -4,6 +4,7 @@
 ..gitignore.un~
 .gitignore~
 .ipynb_checkpoints/
+*~
 .Trash-1000/
 
 .idea/
