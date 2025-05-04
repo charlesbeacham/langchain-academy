@@ -26,6 +26,12 @@ COPY --chown=jupyter:jupyter ./overrides.json /usr/local/share/jupyter/lab/setti
 # Create and set permissions on work directory
 RUN mkdir -p /home/jupyter/work && chown -R jupyter:jupyter /home/jupyter
 
+# set an alias for langgraph dev
+# set host to 0.0.0.0 so that it will be exposed from the container
+RUN echo '#!/bin/sh\nlanggraph dev --host 0.0.0.0 "$@"' > /usr/local/bin/lgdev && \
+    chmod +x /usr/local/bin/lgdev
+
+
 # Set the working directory to the jupyter home
 WORKDIR /home/jupyter/work
 
