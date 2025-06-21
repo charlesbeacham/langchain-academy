@@ -6,6 +6,7 @@
 .ipynb_checkpoints/
 *~
 .Trash-1000/
+**/example.db*
 
 .idea/
 
